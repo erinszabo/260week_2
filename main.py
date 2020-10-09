@@ -1,16 +1,27 @@
-# This is a sample Python script.
+"""
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+1. Devise an experiment to verify that the list index operator is 𝑂(1).
+2. Devise an experiment to verify that get item and set item are 𝑂(1) for dictionaries.
+3. Devise an experiment that compares the performance of the del operator on lists and
+dictionaries.
+4. Given a list of numbers in random order write a linear time algorithm to find the 𝑘th
+smallest number in the list. Explain why your algorithm is linear.
+5. Can you improve the algorithm from the previous problem to be 𝑂(𝑛 log(𝑛))?
+
+"""
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+# import pdf_pg60 as p
 
 
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    print("1. Devise an experiment to verify that the list index operator is 𝑂(1).")
+    # p.list_index_test()
+    print("2. Devise an experiment to verify that get item and set item are 𝑂(1) for dictionaries.")
+    #
+    print("3. Devise an experiment that compares the performance of the del operator on lists and dictionaries.")
+    #
+    print("4. Given a list of numbers in random order write a linear time algorithm to find the 𝑘th smallest number "
+          "in the list. Explain why your algorithm is linear.")
+    #
+    print("5. Can you improve the algorithm from the previous problem to be 𝑂(𝑛 log(𝑛))?")
