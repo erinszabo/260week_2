@@ -9,66 +9,14 @@ smallest number in the list. Explain why your algorithm is linear.
 5. Can you improve the algorithm from the previous problem to be 𝑂(𝑛 log(𝑛))?
 
 """
-import time
 import pdf_pg60 as p
-
-
-def time_decorator(fn):
-    def func(x):
-        start = time.time()
-        x = fn(x)
-        end = time.time()
-        return x, end - start
-
-    return func
-
-
-"""
-### play with this more later ###
-def multi_time_decorator(fn):
-    def func(x):
-        start = time.time()
-        for i in range(10):
-            x = fn(x)
-            i += 1
-        end = time.time()
-        return x, end - start
-
-    return func
-"""
-
-
-@time_decorator
-def sum_of_n_2(num):
-    the_sum = 0
-
-    for i in range(1, num + 1):
-        the_sum += i
-
-    return the_sum
-
-
-@time_decorator
-def sum2(n):
-    return sum(range(1, n + 1))
-
-
-print("")
-print("process time result:")
-print(time.process_time())
-print("")
-print(sum2(100))
-print(f" Multi time: {sum_of_n_2(100)}")
-print(sum_of_n_2(1000))
-print(p.list_index_test(2))
 
 
 if __name__ == '__main__':
     print("")
     print("1. Devise an experiment to verify that the list index operator is 𝑂(1).")
-    # p.list_index_test()
-    # t1 = Timer("list_index_test()", "from pdf_pg60 import list_index_test")
-    # print("list_index_test() ", p.list_index_test.timeit(number=1000), "milliseconds")
+    p.test_enqueue()
+    #
 
     print("2. Devise an experiment to verify that get item and set item are 𝑂(1) for dictionaries.")
     #
