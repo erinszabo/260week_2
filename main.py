@@ -53,10 +53,13 @@ def sum2(n):
     return sum(range(1, n + 1))
 
 
+print("")
+print("process time result:")
+print(time.process_time())
+print("")
 print(sum2(100))
 print(f" Multi time: {sum_of_n_2(100)}")
 print(sum_of_n_2(1000))
-
 print(p.list_index_test(2))
 
 
