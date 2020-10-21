@@ -23,11 +23,26 @@ def time_decorator(fn):
     return func
 
 
+"""
+### play with this more later ###
+def multi_time_decorator(fn):
+    def func(x):
+        start = time.time()
+        for i in range(10):
+            x = fn(x)
+            i += 1
+        end = time.time()
+        return x, end - start
+
+    return func
+"""
+
+
 @time_decorator
-def sum_of_n_2(n):
+def sum_of_n_2(num):
     the_sum = 0
 
-    for i in range(1, n + 1):
+    for i in range(1, num + 1):
         the_sum += i
 
     return the_sum
@@ -39,7 +54,7 @@ def sum2(n):
 
 
 print(sum2(100))
-print(sum_of_n_2(100))
+print(f" Multi time: {sum_of_n_2(100)}")
 print(sum_of_n_2(1000))
 
 print(p.list_index_test(2))
