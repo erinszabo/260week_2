@@ -41,7 +41,8 @@ if __name__ == '__main__':
 
     print("4. Given a list of numbers in random order write a linear time algorithm to find the 𝑘th smallest number "
           "in the list. Explain why your algorithm is linear.")
-    #
+    print("")
+
     print("")
 
     print("5. Can you improve the algorithm from the previous problem to be 𝑂(𝑛 log(𝑛))?")
