@@ -1,7 +1,11 @@
 """
 
+4. Given a list of numbers in random order write a linear time algorithm to find the 𝑘th smallest number in the list.
+   Explain why your algorithm is linear.
+5. Can you improve the algorithm from the previous problem to be 𝑂(𝑛 log(𝑛))?
 
 """
+import random as r
 
 
 def partition(lst, low, high):
@@ -39,7 +43,26 @@ def quick_test():
     quick_sort(lst, 0, n - 1)
     print(f"Sorted: {lst}")
 
-"""
+
+def kth_small(k):
+    """
+    :param k: an int between 0 and 9
+    :return: the kth smallest element of a list with length 10
+    """
+    lst = []
+    for i in range(10):
+        lst.append(r.randint(1, 100))
+    print(f"random list: {lst}")
+    quick_sort(lst, 0, 9)
+    print(f"ordered list: {lst}")
+    print(f"kth smallest element of list: {lst[k-1]}")
+
+
 if __name__ == '__main__':
-    quick_test()
-"""
+    # quick_test()
+    kth_small(1)
+    kth_small(5)
+    kth_small(3)
+    kth_small(10)
+
+

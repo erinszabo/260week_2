@@ -10,6 +10,7 @@ smallest number in the list. Explain why your algorithm is linear.
 
 """
 import pdf_pg60 as p
+import LTA_problem as l
 
 
 if __name__ == '__main__':
