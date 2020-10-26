@@ -46,9 +46,9 @@ def test_enqueue():
 # always timed at 0.0 so don't use
 def time_decorator(fn):
     def func(x):
-        a_queue = Queue()
+        # a_queue = Queue()
         start = time.time()
-        x = fn(x)
+        fn(x)
         # for i in range(0, 90000):
         #    a_queue.enqueue(i)
         time.sleep(0.000001)
@@ -91,7 +91,7 @@ def sum2(n):
 def list_index_test(n):
     """
     create a list,
-    index at various locations and use timeit to verify that
+    index at various locations and use time estimate to verify
     the list size is independent of the time it takes to index at any location, O(1)
     :return: String
     """
@@ -103,3 +103,18 @@ def list_index_test(n):
         lst.append("t")
     return print(f"item at index {n}: {lst[n]}")
 
+
+@time_decorator
+def get_test(x):
+    """
+    create a dictionary,
+    get or set various locations and time the task
+    :return: String
+    """
+    dictionary = {
+        "meow": "cat",
+        "bark": "dog",
+        "oink": "pig"
+    }
+    # print(dictionary)
+    return print(f"{dictionary.get(x)}s {x}")
