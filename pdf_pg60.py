@@ -29,6 +29,8 @@ class Queue:
         return len(self.items)
 
 
+"""
+
 def test_enqueue():
     a_queue = Queue()
     start = time.time()
@@ -38,12 +40,18 @@ def test_enqueue():
     end = time.time()
     print(f"Enqueue {end - start} seconds")
 
+"""
+
 
 # always timed at 0.0 so don't use
 def time_decorator(fn):
     def func(x):
+        a_queue = Queue()
         start = time.time()
         x = fn(x)
+        for i in range(0, 90000):
+            a_queue.enqueue(i)
+        time.sleep(0.000001)
         end = time.time()
         return x, end - start
 
@@ -93,3 +101,6 @@ def list_index_test(size):
     for i in range(size):
         lst.append("x")
     return lst
+
+
+list_index_test(5)

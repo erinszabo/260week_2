@@ -15,7 +15,6 @@ import pdf_pg60 as p
 if __name__ == '__main__':
     print("")
     print("1. Devise an experiment to verify that the list index operator is 𝑂(1).")
-    p.test_enqueue()
     #
 
     print("2. Devise an experiment to verify that get item and set item are 𝑂(1) for dictionaries.")
