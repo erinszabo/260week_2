@@ -54,7 +54,6 @@ def time_decorator(fn):
         time.sleep(0.000001)
         end = time.time()
         return f"time estimate: {end - start}"  # x,
-
     return func
 
 
@@ -104,6 +103,3 @@ def list_index_test(n):
         lst.append("t")
     return print(f"item at index {n}: {lst[n]}")
 
-
-print("test")
-print(list_index_test(50))
