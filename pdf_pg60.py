@@ -49,11 +49,11 @@ def time_decorator(fn):
         a_queue = Queue()
         start = time.time()
         x = fn(x)
-        for i in range(0, 90000):
-            a_queue.enqueue(i)
+        # for i in range(0, 90000):
+        #    a_queue.enqueue(i)
         time.sleep(0.000001)
         end = time.time()
-        return x, end - start
+        return f"time estimate: {end - start}"  # x,
 
     return func
 
@@ -89,7 +89,7 @@ def sum2(n):
 
 
 @time_decorator
-def list_index_test(size):
+def list_index_test(n):
     """
     create a list,
     index at various locations and use timeit to verify that
@@ -98,9 +98,12 @@ def list_index_test(size):
     """
     lst = []
     # string = f"list size: {size}"
-    for i in range(size):
-        lst.append("x")
-    return lst
+    for i in range(100):
+        lst.append("c")
+        lst.append("a")
+        lst.append("t")
+    return print(f"item at index {n}: {lst[n]}")
 
 
-list_index_test(5)
+print("test")
+print(list_index_test(50))
