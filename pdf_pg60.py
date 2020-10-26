@@ -54,6 +54,7 @@ def time_decorator(fn):
         time.sleep(0.000001)
         end = time.time()
         return f"time estimate: {end - start}"  # x,
+
     return func
 
 
@@ -118,3 +119,27 @@ def get_test(x):
     }
     # print(dictionary)
     return print(f"{dictionary.get(x)}s {x}")
+
+
+@time_decorator
+def del_list_test(x):
+    """
+    create a list,
+    test del operator and time the task
+    :return: String
+    """
+    lst = []
+
+
+@time_decorator
+def del_dict_test(x):
+    """
+    create a dictionary,
+    test del operator and time the task
+    :return: String
+    """
+    dictionary = {
+        "meow": "cat",
+        "bark": "dog",
+        "oink": "pig"
+    }

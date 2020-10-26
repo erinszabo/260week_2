@@ -23,7 +23,7 @@ if __name__ == '__main__':
     print("")
 
     print("2. Devise an experiment to verify that get item and set item are 𝑂(1) for dictionaries.")
-    #
+    print("get tests:")
     print(p.get_test("meow"))
     print(p.get_test("oink"))
     print(p.get_test("bark"))
