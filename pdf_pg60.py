@@ -126,9 +126,12 @@ def del_list_test(x):
     """
     create a list,
     test del operator and time the task
+    :type x: int [0,3]
     :return: String
     """
-    lst = []
+    lst = ["red", "green", "blue", "yellow"]
+    del lst[x]
+    return print(f"{lst}, element {x} removed")
 
 
 @time_decorator
@@ -136,6 +139,7 @@ def del_dict_test(x):
     """
     create a dictionary,
     test del operator and time the task
+    :type x: String "meow", "bark", or "oink" only
     :return: String
     """
     dictionary = {
@@ -143,3 +147,5 @@ def del_dict_test(x):
         "bark": "dog",
         "oink": "pig"
     }
+    del dictionary[x]
+    return print(f"{dictionary}, {x} removed")

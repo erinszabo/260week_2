@@ -30,7 +30,13 @@ if __name__ == '__main__':
     print("")
 
     print("3. Devise an experiment that compares the performance of the del operator on lists and dictionaries.")
-    #
+    print(p.del_list_test(0))
+    print(p.del_list_test(1))
+    print(p.del_list_test(2))
+    print(p.del_list_test(3))
+    print(p.del_dict_test("oink"))
+    print(p.del_dict_test("bark"))
+    print(p.del_dict_test("meow"))
     print("")
 
     print("4. Given a list of numbers in random order write a linear time algorithm to find the 𝑘th smallest number "
