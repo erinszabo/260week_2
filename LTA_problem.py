@@ -60,9 +60,6 @@ def kth_small(k):
 
 if __name__ == '__main__':
     # quick_test()
-    kth_small(1)
-    kth_small(5)
-    kth_small(3)
-    kth_small(10)
+    print("")
 
 
